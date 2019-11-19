@@ -33,7 +33,10 @@ router.get("/", async function(req, res, next) {
     console.log(data);
     // let temp = data.list[0].main.temp;
     res.send(data);
-    console.log(data)
 });
+
+
+
+
 
 module.exports = router;

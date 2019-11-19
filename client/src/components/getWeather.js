@@ -12,8 +12,9 @@ export default class getWeather extends React.Component {
     input: "", apiHumidity: "", apiName: "", apiTemp: ""};
   }
 
-  callAPI() {
-    fetch(`http://localhost:9000/getWeather?city=London`)
+  callAPI = () => {
+
+    fetch(`http://localhost:9000/getWeather?city=${this.state.input}`)
     .then(res => res.json())
     .then(res => {
         let weatherId = res.list[0].weather[0].id;
@@ -39,14 +40,14 @@ export default class getWeather extends React.Component {
       });
   }
 
-  addTask = () => {
+  // addTask = () => {
 
-      this.setState({
-          inputCity: this.state.input,
-          input: ''
-      })
-      this.callAPI();
-  }
+  //     this.setState({
+  //         inputCity: this.state.input,
+  //         input: ''
+  //     })
+  //     this.callAPI();
+  // }
 
   render() {
     return (
@@ -55,7 +56,7 @@ export default class getWeather extends React.Component {
       <h1 className="Api-Project">Welcome to my API project</h1>
         <p className="Api-project">The Weather in {this.state.apiName}</p>
         Enter City <input className="inputbox" value={this.state.input} onChange={this.myCHangeHandler}placeholder="city" />
-        <button className="myButton" onClick={this.addTask}>Add Task</button>
+        <button className="myButton" onClick={this.callAPI}>Add Task</button>
         <img src={this.state.weatherIcon} alt="icon"/>
         <p> Temperature: {this.state.apiTemp}C </p> 
         <p> Humidity: {this.state.apiHumidity}</p>

@@ -1,17 +1,17 @@
 const request = require('request');
 const {promisify} = require('util');
-require('dotenv').config();
 
 const promisifiedRequest = promisify(request);
 
-const chucknorris = async () => {
+const gameofthrones = async (id) => {
     let data = await promisifiedRequest({
-        url: 'https://api.chucknorris.io/jokes/random',
+        url: `https://www.anapioficeandfire.com/api/houses/${id}`,
         json: true
      
     });
     console.log(data.body)
-    return data.body;
+    return data.body
+
 }
 
-module.exports = chucknorris;
+module.exports = gameofthrones;
