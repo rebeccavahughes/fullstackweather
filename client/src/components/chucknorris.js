@@ -21,10 +21,9 @@ export default class chucknorris extends Component {
     render() {
         return (
             <div>
-            <h1>Chuck Norris joke generator</h1>
-           <p>i am chuck norris </p>
-           <button className="chuck" onClick={() => this.callAPI()}>Get joke</button>
-           <p>joke: {this.state.joke}</p>
+            <h1 className="chuckheader">Chuck Norris joke generator</h1>
+           <button className="chuckbtn" onClick={() => this.callAPI()}>Get new joke</button>
+           <p className="joke">{this.state.joke}</p>
             </div>
         )
     }

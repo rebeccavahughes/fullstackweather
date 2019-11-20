@@ -22,7 +22,7 @@ export default class gameofthrones extends Component {
         return (
             <div>
             <div>
-            <h1>Game of thrones Houses</h1>
+            <h1 className="gotheader">Game of thrones Houses</h1>
           <select name="value" ref="house">
               <option value="House Algood">House Algood</option>
               <option value="House Allyrion of Godsgrace">House Allyrion of Godsgrace</option>

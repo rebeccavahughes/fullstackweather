@@ -2,6 +2,7 @@ const gameofthrones = require ('../lib/gameofthrones')
 var express = require("express");
 var router = express.Router();
 
+
 router.get("/", async function(req, res, next) {
     let house = req.query.house
     switch(house){

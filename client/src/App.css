@@ -1,17 +1,60 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
+.apps{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  min-height: 100vh;
 }
-
-body {
+.weather {
   background-image: url('/images/weather2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 33%;
 }
 
-.App-link {
-  color: #09d3ac;
+.chuck{
+  background-image: url('/images/chucknorris.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%
+}
+
+.got{
+  background-image: url('/images/got.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33%;
+ 
+}
+
+.gotheader{
+  color: white;
+  text-shadow: 0.1vh 0.2vh gray;
+  text-align: center;
+}
+
+.chuckheader{
+  color: white;
+  text-shadow: 0.1vh 0.2vh gray;
+  text-align: center;
+}
+.weatherheader{
+  text-align: center;
+  text-shadow: 0.2vh 0.4vh gray;
+  color: white;
+}
+.joke{
+  color: white;
+  background-color: gray;
+  position: fixed;
+  bottom: 36vh;
+  left: 79vh;
+  height: 130px;
+  /* padding-top: 60px;
+  padding-bottom: 3vh;
+  padding-left: 1vh;
+  padding-right: 1vh; */
+  width: 530px;
+  text-align: center
+  
 }

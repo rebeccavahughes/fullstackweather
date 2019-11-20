@@ -53,11 +53,11 @@ export default class getWeather extends React.Component {
     return (
       <div className="App">
       <header className="App-header">
-      <h1 className="Api-Project">Welcome to my API project</h1>
+      <h1 className="weatherheader">Welcome to my API project</h1>
         <p className="Api-project">The Weather in {this.state.apiName}</p>
         Enter City <input className="inputbox" value={this.state.input} onChange={this.myCHangeHandler}placeholder="city" />
         <button className="myButton" onClick={this.callAPI}>Add Task</button>
-        <img src={this.state.weatherIcon} alt="icon"/>
+        <img src={this.state.weatherIcon} />
         <p> Temperature: {this.state.apiTemp}C </p> 
         <p> Humidity: {this.state.apiHumidity}</p>
         </header>
